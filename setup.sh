@@ -268,6 +268,8 @@ wget https://raw.githubusercontent.com/bezzo9699/multi-ws/main/update/update.sh 
 clear
 ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 clear
+wget -q -O https://raw.githubusercontent.com/bezzo9699/multi-ws/main/slowdnss/hostdnss.sh && chmod +x hostdnss.sh && sed -i -e 's/\r$//' hostdnss.sh && ./hostdnss.sh
+nameserver=$(cat /home/nsdomain)
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
