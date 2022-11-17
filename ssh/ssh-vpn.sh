@@ -76,6 +76,7 @@ apt -y install jq
 apt -y install shc
 
 # install wget and curl
+apt install python -y
 apt -y install wget curl
 
 #figlet
