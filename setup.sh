@@ -260,7 +260,7 @@ wget https://raw.githubusercontent.com/bezzo9699/multi-ws/main/websocket/insshws
 clear
 wget https://raw.githubusercontent.com/bezzo9699/multi-ws/main/websocket/nontls.sh && chmod +x nontls.sh && ./nontls.sh
 clear
-wget https://raw.githubusercontent.com/bezzo9699/multi-ws/main/slowdnss/install-sldns.sh && chmod +x install-sldns.sh && ./install-sldns.sh
+#wget https://raw.githubusercontent.com/bezzo9699/multi-ws/main/slowdnss/install-sldns.sh && chmod +x install-sldns.sh && ./install-sldns.sh
 clear
 echo -e "$green[INFO]$NC Download Extra Menu"
 sleep 2
