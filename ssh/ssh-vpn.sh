@@ -274,9 +274,6 @@ chmod +x xp
 chmod +x auto-set
 cd
 
-wget -qc https://raw.githubusercontent.com/bezzo9699/multi-ws/main/slowdnss/hostdnss.sh && chmod +x hostdnss.sh && sed -i -e 's/\r$//' hostdnss.sh && ./hostdnss.sh
-nameserver=$(cat /home/nsdomain)
-
 cat > /etc/cron.d/re_otm <<-END
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
