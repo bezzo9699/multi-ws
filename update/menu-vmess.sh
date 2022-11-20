@@ -315,7 +315,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/",
       "type": "none",
-      "host": "${tsel.me}",
+      "host": "${}",
       "tls": "none"
 }
 EOF`
@@ -338,7 +338,7 @@ vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
-vmesslink2="vmess://$(echo $asu | base64 -w 0)"
+vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
