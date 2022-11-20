@@ -284,7 +284,7 @@ menu
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "   Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
-sed -i '/#worryfree$/a\### '"$user $exp"'\
+sed -i '/#vmess$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/config.json
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
@@ -313,9 +313,9 @@ ask=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/worryfree",
+      "path": "/",
       "type": "none",
-      "host": "${domain}",
+      "host": "${tsel.me}",
       "tls": "none"
 }
 EOF`
@@ -338,7 +338,7 @@ vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
-vmesslink2="vmess://$(echo $ask | base64 -w 0)"
+vmesslink2="vmess://$(echo $asu | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
@@ -357,7 +357,7 @@ echo -e "$COLOR1 ${NC} id            : ${uuid}"
 echo -e "$COLOR1 ${NC} alterId       : 0" 
 echo -e "$COLOR1 ${NC} Security      : auto" 
 echo -e "$COLOR1 ${NC} Network       : ws" 
-echo -e "$COLOR1 ${NC} Path          : /worryfree" 
+echo -e "$COLOR1 ${NC} Path          : /vmess" 
 echo -e "$COLOR1 ${NC} Path WSS      : wss://bug.com/vmess" 
 echo -e "$COLOR1 ${NC} ServiceName   : vmess-grpc" 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
