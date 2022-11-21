@@ -313,9 +313,9 @@ ask=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/bebas",
+      "path": "/worryfree",
       "type": "none",
-      "host": "${bugmu}",
+      "host": "${domain}",
       "tls": "none"
 }
 EOF`
