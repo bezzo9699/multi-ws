@@ -313,7 +313,7 @@ ask=`cat<<EOF
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
-      "path": "/worryfree",
+      "path": "/vmess",
       "type": "none",
       "host": "${domain}",
       "tls": "none"
