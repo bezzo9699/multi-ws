@@ -7,11 +7,11 @@ rm nsdomain
 
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
-DOMAIN=thekillstore.me
-SUB_DOMAIN=vpn-${sub}.thekillstore.me
-NS_DOMAIN=ns-${subsl}.thekillstore.me
-CF_ID=bezzo9699@gmail.com
-CF_KEY=da3e57beb22acfd13192c5b820c2512300b34
+DOMAIN=slowdns.bond
+SUB_DOMAIN=vpn-${sub}.slowdns.bond
+NS_DOMAIN=ns-${subsl}.slowdns.bond
+CF_ID=bezzoperantau9699@gmail.com
+CF_KEY=0b20eeb1c9762917c3aee1143d5a36b1931c0
 
 echo "IP=""$SUB_DOMAIN" >> /var/lib/ssnvpn-pro/subdomain.conf
 echo "$NS_DOMAIN" >> /root/nsdomain
